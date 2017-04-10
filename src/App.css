@@ -1,0 +1,61 @@
+html, body {
+    height: 100%;
+}
+
+ul li {
+    list-style: none;
+    margin: 5px auto;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.root, .content {
+    height: 100%;
+}
+
+.content {
+    width: 20%;
+    padding: 50px;
+    background-color: #728a9e;
+}
+
+.title, .position {
+    color: #d5e7f3;
+} 
+
+.clear-btn, .list {
+    color: #fff;
+}
+
+.title {
+    font-weight: normal;
+}
+
+.clear-btn {
+    float: right;
+    margin: 23px 0;
+
+    cursor: pointer;
+}
+
+.list {
+    padding: 0;
+}
+
+.num {
+    float: right;
+}
+
+.type > .num {
+    padding: 1px 8px;
+
+    background-color: #647786;
+    border-radius: 10px; 
+}
