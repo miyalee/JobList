@@ -1,4 +1,4 @@
-# job-list by react
+# JobList by react
 
 ## 如何查看效果
 
