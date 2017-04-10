@@ -10,31 +10,56 @@ const LIST = [
         position: [
             {
                 id: 'job_01',
-                text:'MAC',
+                text:'MAC 开发工程师',
                 num: 9
             },
             {
                 id: 'job_02',
-                text:'MA',
-                num: 11
+                text:'IOS APP 测试开发工程师',
+                num: 17
+            },
+            {
+                id: 'job_03',
+                text:'Android 运程控制工程师',
+                num: 61
+            },
+            {
+                id: 'job_04',
+                text:'Web 前端工程师',
+                num: 31
+            },
+            {
+                id: 'job_05',
+                text:'Android 多媒体软件开发工程师',
+                num: 2
             }
         ]
     },
     {
         id: 'job_1',
-        text: '工研发部门',
-        num: 2,
+        text: '产品设计部门',
+        num: 136,
         position: [
             {
                 id: 'job_11',
-                text:'cAC',
-                num: 14
+                text:'网页设计师',
+                num: 47
             },
             {
                 id: 'job_12',
-                text:'cA',
-                num: 15
-            }
+                text:'ID/工业设计师',
+                num: 39
+            },
+            {
+                id: 'job_13',
+                text:'视觉设计师/GUI界面设计师',
+                num: 42
+            },
+            {
+                id: 'job_14',
+                text:'平面设计师',
+                num: 8
+            },
         ]
     }
 ]
@@ -83,8 +108,8 @@ class JobList extends Component {
                     {
                         LIST.map(function(option, index) {
                             return(
-                                <li className="type" key={index}>
-                                    <input type="checkbox" id={option.id} onChange={handleJobToggle} checked={self.state[option.id]}/>111
+                                <li className="job" key={index}>
+                                    <input type="checkbox" id={option.id} onChange={handleJobToggle} checked={self.state[option.id]}/>{option.text}
                                     <span className="num">{option.num}</span>
                                     <PositionList status={self.state[option.id]} option={option}/>
                                 </li>
@@ -135,7 +160,7 @@ class PositionList extends Component {
             position_list = this.props.option.position;
 
         return(
-            <ul>
+            <ul className="position">
                 {
                     position_list.map(function(option, index) {
                         return(
